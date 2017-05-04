@@ -1,0 +1,35 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /Users/chengyang/.nvm/versions/node/v6.9.0/bin/node /Users/chengyang/.nvm/versions/node/v6.9.0/bin/firebase serve
+[debug] CLI Version:  3.6.1
+[debug] Platform:     darwin
+[debug] Node Version: v6.9.0
+[debug] Time:         Wed May 03 2017 21:45:40 GMT-0700 (PDT)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/GZdNcvc0p2h9NheDQIODsaPy-HUlyFsmYHts8Vmq9vigH36Z1ipBw14aY1dznUG-',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed May 03 2017 21:45:40 GMT-0700 (PDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/friendlychat-bec33  
+ Wed May 03 2017 21:45:40 GMT-0700 (PDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/friendlychat-bec33/tokens  
+ Wed May 03 2017 21:45:41 GMT-0700 (PDT)
+[debug] <<< HTTP RESPONSE 200
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: /Users/chengyang/friendlychat/web-start
+[debug] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-bec33  
+ Wed May 03 2017 21:45:41 GMT-0700 (PDT)
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/833673229814/clients/_:getWebAppConfig  
+ Wed May 03 2017 21:45:42 GMT-0700 (PDT)
+[debug] <<< HTTP RESPONSE 200
+[info] Public Directory: ./
+[info] 
+[info] Server listening at: http://localhost:5000
