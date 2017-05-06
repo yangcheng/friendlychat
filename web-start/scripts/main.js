@@ -76,7 +76,7 @@ FriendlyChat.prototype.loadMessages = function() {
 
   this.messagesRef.limitToLast(12).on('child_added',setMessage);
   this.messagesRef.limitToLast(12).on('child_changed',setMessage);
-  
+
 };
 
 // Saves a new message on the Firebase DB.
@@ -84,8 +84,18 @@ FriendlyChat.prototype.saveMessage = function(e) {
   e.preventDefault();
   // Check that the user entered a message and is signed in.
   if (this.messageInput.value && this.checkSignedInWithMessage()) {
-
-    // TODO(DEVELOPER): push new message to Firebase.
+    // push new message to Firebase.
+    var currentUser = this.auth.currentUser;
+    this.messagesRef.push({
+      name:currentUser.displayName,
+      text:this.messageInput.value,
+      photoUrl:currentUser.photoUrl || '/images/profile_placeholder.png'
+    }).then(function () {
+      FriendlyChat.resetMaterialTextfield(this.messageInput);
+      this.toggleButton()
+    }.bind(this)).catch(function(error) {
+        console.console.error('Error writing new message to Firebase database ', error);
+    });
 
   }
 };
